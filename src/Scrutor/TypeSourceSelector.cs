@@ -44,7 +44,10 @@ public class TypeSourceSelector : ITypeSourceSelector, ISelector
     {
         try
         {
+           
+#pragma warning disable CS8604 // Possible null reference argument.
             return FromDependencyContext(DependencyContext.Default, predicate);
+#pragma warning restore CS8604 // Possible null reference argument.
         }
         catch
         {
